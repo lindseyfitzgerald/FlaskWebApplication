@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Video Game Collection</title>
+    <style>
+        h1 {
+            text-align: center;
+            }
+        h2 {
+            text-align: center;
+        }
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            float: center;
+            }
+        li {
+            float: left;
+            }
+        li a {
+            display: block;
+            padding: 8px;
+            background-color: #dddddd;
+        }
+    </style>
+</head>
+<body>
+    <h1>Video Game Collection</h1>
+    <h2>{% block heading %}{% endblock %}</h2>
+    <ul>
+        <li><a href="{{url_for('home')}}">Home</a></li>
+        <li><a href="{{url_for('display')}}">View Collection</a></li>
+        <li><a href="{{url_for('add')}}">Add To Collection</a></li>
+        <li><a href="{{url_for('remove')}}">Remove From Collection</a></li>
+    </ul>
+    <div>
+        {% block body %}
+        {% endblock %}
+    </div>
+
+</body>
+</html>
