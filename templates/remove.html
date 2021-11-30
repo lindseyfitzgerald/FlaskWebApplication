@@ -5,4 +5,35 @@
   {% endblock %}
 
   {% block body %}
+    <style>
+        div {
+            margin-bottom: 1em;
+            }
+        label {
+            display: inline-block;
+
+            text-align: right;
+            }
+        input {
+            margin-left: 1em;
+            margin-bottom: .5em;
+            }
+        form {
+            background-color: #a98ac2;
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0 auto;
+            width: 450px;
+            padding: 0 1em .5em;
+            border: 3px solid black;
+            }
+    </style>
+        <form action="{{ url_for('removeGame') }}" method="post">
+            <div>
+                <label for="name">Name of Game you would like to remove: </label>
+                <input type="text" name="name" id="name" placeholder="Enter game name">
+            </div>
+
+            <button>Submit</button>
+        </form>
+
   {% endblock %}

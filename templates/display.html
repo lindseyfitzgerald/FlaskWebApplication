@@ -3,6 +3,34 @@
   {% block heading %}
       View All Games
   {% endblock %}
-  
-  {% block body %}
+
+    {% block body %}
+    <style>
+        <style>
+        div {
+            margin-bottom: 1em;
+            color: black;
+            }
+        label {
+            display: inline-block;
+
+            text-align: right;
+            }
+        input {
+            margin-left: 1em;
+            margin-bottom: .5em;
+            }
+
+    </style>
+        <div>
+            <ul>
+                {{ games }}
+                {% for game in games %}
+                    <li> {{game}}</li>
+                {% endfor %}
+            </ul>
+        </div>
+
+
+
   {% endblock %}

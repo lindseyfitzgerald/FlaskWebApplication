@@ -3,6 +3,52 @@
   {% block heading %}
       Add Game
   {% endblock %}
-  
+
   {% block body %}
+    <style>
+        div {
+            margin-bottom: 1em;
+            }
+        label {
+            display: inline-block;
+
+            text-align: right;
+            }
+        input {
+            margin-left: 1em;
+            margin-bottom: .5em;
+            }
+        form {
+            background-color: #a98ac2;
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0 auto;
+            width: 450px;
+            padding: 0 1em .5em;
+            border: 3px solid black;
+            }
+    </style>
+        <form action="{{ url_for('getAddFormData') }}" method="post">
+            <div>
+                <label for="name">Name of Game: </label>
+                <input type="text" name="name" id="name" placeholder="Enter game name">
+            </div>
+            <div>
+                <label for="image">Image of Game: </label>
+                <input type="file" name="image" id="image" accept=".png,.jfif,.jpg,.jpeg" placeholder="Enter image url">
+            </div>
+            <div>
+                <label for="console">Console Type: </label>
+                <input type="text" name="console" id="console" placeholder="Enter console type">
+            </div>
+            <div>
+                <label for="year">Year Released: </label>
+                <input type="number" name="year" id="year" placeholder="Enter year the game was released">
+            </div>
+            <div>
+                <label for="description">Game description: </label>
+                <input type="text" style="height:200px" name="description" id="description" placeholder="Enter game description">
+            </div>
+            <button>Submit</button>
+        </form>
+
   {% endblock %}
