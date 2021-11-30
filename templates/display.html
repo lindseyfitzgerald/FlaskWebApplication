@@ -5,32 +5,39 @@
   {% endblock %}
 
     {% block body %}
-    <style>
-        <style>
-        div {
-            margin-bottom: 1em;
-            color: black;
+<style>
+    div {
+        background-color: #a98ac2;
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0 auto;
+        width: 800px;
+        padding: 0 1em .5em;
+        border: 3px solid black;
             }
-        label {
-            display: inline-block;
+    img {
+        border: 3px solid black;
+        width: 400;
+        height: 200px
+        }
+</style>
 
-            text-align: right;
-            }
-        input {
-            margin-left: 1em;
-            margin-bottom: .5em;
-            }
-
-    </style>
-        <div>
             <ul>
-                {{ games }}
-                {% for game in games %}
-                    <li> {{game}}</li>
-                {% endfor %}
+                <div>
+                    {% for game in games %}
+                    <li>
+                        <h4>{{game[0]}}</h4>
+                        <img src="static/images/{{game[1]}}" alt="">
+                        <p>System: {{game[2]}}
+                            <br>
+                        Year Released: {{game[3]}}
+                            <br>
+                        {{game[4]}}</p>
+                    </li>
+                    {% endfor %}
+                </div>
             </ul>
-        </div>
 
+        <script></script>
 
 
   {% endblock %}

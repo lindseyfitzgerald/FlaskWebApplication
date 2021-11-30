@@ -27,14 +27,14 @@
             border: 3px solid black;
             }
     </style>
-        <form action="{{ url_for('getAddFormData') }}" method="post">
-            <div>
-                <label for="name">Name of Game: </label>
-                <input type="text" name="name" id="name" placeholder="Enter game name">
-            </div>
+        <form action="" method="post" enctype="multipart/form-data">
             <div>
                 <label for="image">Image of Game: </label>
                 <input type="file" name="image" id="image" accept=".png,.jfif,.jpg,.jpeg" placeholder="Enter image url">
+            </div>
+            <div>
+                <label for="name">Name of Game: </label>
+                <input type="text" name="name" id="name" placeholder="Enter game name">
             </div>
             <div>
                 <label for="console">Console Type: </label>
@@ -50,5 +50,6 @@
             </div>
             <button>Submit</button>
         </form>
+
 
   {% endblock %}
