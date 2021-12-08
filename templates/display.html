@@ -25,11 +25,11 @@
                 <div>
                     {% for game in games %}
                     <li>
-                        <h4>{{game[0]}}</h4>
+                        <h3>{{game[0]}}</h3>
                         <img src="static/images/{{game[1]}}" alt="">
-                        <p>System: {{game[2]}}
+                        <p><strong>System:</strong> {{game[2]}}
                             <br>
-                        Year Released: {{game[3]}}
+                            <strong>Year Released:</strong> {{game[3]}}
                             <br>
                         {{game[4]}}</p>
                     </li>
@@ -37,7 +37,7 @@
                 </div>
             </ul>
 
-        <script></script>
+
 
 
   {% endblock %}

@@ -51,7 +51,7 @@ def getFormData():
         with closing(conn.cursor()) as c:
            c.execute(sql, (name, filename, console, year, description))
            conn.commit()
-    return redirect("display")
+    return render_template("add.html")
 
 
 @app.route('/remove')

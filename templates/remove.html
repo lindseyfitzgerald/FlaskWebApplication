@@ -26,9 +26,13 @@
             padding: 0 1em .5em;
             border: 3px solid black;
             }
+        label {
+            font-weight: bold;}
     </style>
-        <form action="{{ url_for('removeGame') }}" method="post">
+
+        <form action="{{ url_for('removeGame') }}" method="post" name="remove">
             <div>
+
                 <label for="name">Name of Game you would like to remove: </label>
                 <input type="text" name="name" id="name" placeholder="Enter game name">
             </div>
