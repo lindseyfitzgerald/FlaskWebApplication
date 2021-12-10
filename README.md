@@ -23,3 +23,7 @@ This web application was designed to display a video game collection, as well as
 >Create virtual enviornment
 
 >Files must be laid out as they are pictured below
+
+![image](https://user-images.githubusercontent.com/84094288/145621178-776b6d4f-aceb-4955-8160-b7db60d7da04.png)
+
+>Run the main.py python file
